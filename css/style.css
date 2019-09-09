@@ -131,7 +131,7 @@ section{ overflow: hidden;}
 .works_box:hover .works_photo img{ transform: scale(1.3);} 
 .works_introduction{ padding: 0 0 2% 2%;}
 .works_introduction h5{ font-size: 15px; color: #333; margin: 2% 0 0 0; font-weight: 600; letter-spacing: 1.2px;}
-.works_introduction p{ font-size: 13px; color: #828282; letter-spacing: 1.2px;}
+.works_introduction p{ font-size: 13px; color: #828282; letter-spacing: 1px;}
 .works_end_sky{ width: 100%; height: 390px; background: url(../img/work_acc_sky_end.svg) no-repeat left bottom; position: relative; z-index: 1; margin-bottom: -1%;}
 
 /* section #3 works acc */
@@ -156,7 +156,7 @@ section{ overflow: hidden;}
 .others_project{ width: 100%; margin: 0 auto; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;}
 .others_work_project{ width: 40%; margin: 0 0 3% 0;}
 .others_project .others_work_project{ margin: 2% 1%;}
-.others_box .works_photo{ width: 100%;}
+.others_box .works_photo{ width: 100%; box-sizing: border-box; -webkit-box-sizing: border-box;}
 .others_box .works_photo img{ width: 100%; height: auto; display: block;}
 .others_box:hover .works_photo img{ transform: scale(1.3);} 
 
@@ -250,7 +250,7 @@ footer p{ padding: 2% 0; color: #F7F8F8; font-size: 13px; letter-spacing: 1.2px;
 /*section #2 about*/
 .about_container{ width: 65%; margin: 73% auto 10%;}
 .about_container h2{ margin-bottom: 10%; }
-.about_content{ transform: rotate(-7deg) scale(1.3); -webkit-transform: rotate(-7deg) scale(1.3); -moz-transform: rotate(-7deg) scale(1.3); -ms-transform: rotate(-7deg) scale(1.3); -o-transform: rotate(-7deg) scale(1.3);}
+.about_content{ transform: rotate(-7deg) scale(1.2); -webkit-transform: rotate(-7deg) scale(1.2); -moz-transform: rotate(-7deg) scale(1.2); -ms-transform: rotate(-7deg) scale(1.2); -o-transform: rotate(-7deg) scale(1.2);}
 .about_info{ margin: 0 0 0 11%;}
 .about_acc_img{ width: 50%;}
 .about_acc_line:nth-child(2){ left: -120%; top: 60%;}
@@ -264,7 +264,7 @@ footer p{ padding: 2% 0; color: #F7F8F8; font-size: 13px; letter-spacing: 1.2px;
 .works_project{ width: 100%; margin: 40% auto -10%;}
 .works_box{ width: 90%; margin: 0 auto;}
 .works_project:nth-child(even) .works_box{ width: 90%; margin: 0 auto;}
-.others_project .others_work_project{ width: 90%; margin: 4% auto; border: 1px solid #F7F8F8; box-sizing: border-box; -webkit-box-sizing: border-box;}
+.others_project .others_work_project{ width: 90%; margin: 4% auto; border: 1px solid #e4e4e4; box-sizing: border-box; -webkit-box-sizing: border-box;}
 .project_img{ width: 90%; margin: 44% auto 5%;}
 .project_info a{ width: 90%; padding: 5%; text-align: center;}
 .close{ margin: 4% auto;}
@@ -289,12 +289,13 @@ footer p{ padding: 2% 0; color: #F7F8F8; font-size: 13px; letter-spacing: 1.2px;
 .about_container h2{ font-size: 55px;}
 /*section #1 index*/
 .vis_main_girl{ margin: 45% auto;}
-.vis_main_text{ transform: translate(-81%,-30%) rotate(90deg) scale(1.9); -webkit-transform: translate(-81%,-30%) rotate(90deg) scale(1.9); -moz-transform: translate(-81%,-30%) rotate(90deg) scale(1.9); -ms-transform: translate(-81%,-30%) rotate(90deg) scale(1.9); -o-transform: translate(-81%,-30%) rotate(90deg) scale(1.9);}
+.vis_main_text{ transform: translate(-81%,-80%) rotate(90deg) scale(1.9); -webkit-transform: translate(-81%,-80%) rotate(90deg) scale(1.9); -moz-transform: translate(-81%,-80%) rotate(90deg) scale(1.9); -ms-transform: translate(-81%,-80%) rotate(90deg) scale(1.9); -o-transform: translate(-81%,-80%) rotate(90deg) scale(1.9);}
 .left_bottom_content{ top: 82%;}
+.left_top_content{ top: 1%;}
 /*section #2 about*/
-.about_container{ margin: 50% auto 33%;}
+.about_container{ margin: 35% auto 33%;}
 .about_textbg_liquid{ transform: translate(-35%,-40%) scale(3.2);}
-.vis_textblock_girl{ right: 25%; top: -10%;}
+.vis_textblock_girl{ right: 24%; top: -12%;}
 
 }
 
