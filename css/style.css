@@ -289,7 +289,7 @@ footer p{ padding: 2% 0; color: #F7F8F8; font-size: 13px; letter-spacing: 1.2px;
 .about_container h2{ font-size: 55px;}
 /*section #1 index*/
 .vis_main_girl{ margin: 45% auto;}
-.vis_main_text{ transform: translate(-81%,-80%) rotate(90deg) scale(1.9); -webkit-transform: translate(-81%,-80%) rotate(90deg) scale(1.9); -moz-transform: translate(-81%,-80%) rotate(90deg) scale(1.9); -ms-transform: translate(-81%,-80%) rotate(90deg) scale(1.9); -o-transform: translate(-81%,-80%) rotate(90deg) scale(1.9);}
+.vis_main_text{ transform: translate(-81%,-100%) rotate(90deg) scale(1.9); -webkit-transform: translate(-81%,-100%) rotate(90deg) scale(1.9); -moz-transform: translate(-81%,-100%) rotate(90deg) scale(1.9); -ms-transform: translate(-81%,-100%) rotate(90deg) scale(1.9); -o-transform: translate(-81%,-100%) rotate(90deg) scale(1.9);}
 .left_bottom_content{ top: 82%;}
 .left_top_content{ top: 1%;}
 /*section #2 about*/
