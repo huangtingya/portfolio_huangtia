@@ -1,0 +1,336 @@
+/* Import google font ---------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC:400,500,600&display=swap');
+/* ----------------------------------------------------- */
+
+/* Setting Font-family --------------------------------- */
+*{ font-family: 'Lora','Noto Serif TC','微軟正黑體';}
+.about_info h5, .about_info p, .about_info h6, .works_project p, .works_project h5, .works_introduction h5, .works_introduction p, .project_info, .project_info a, .close span, footer p{ font-family:  'Lora','Noto Serif TC','微軟正黑體';}
+.font_title{ font-family: 'Lora'; font-size: 90px; letter-spacing: 5px; font-weight: 600;}
+/* ----------------------------------------------------- */
+
+/* 顏色定義 --------------------------------------------- */
+/* $redColor: rgba(244,67,54,1)  #f44336 */
+/* $blueColor:rgba(33,150,243,1) #fed6e3 */
+/* $blackColor: #14120F */
+/* $grayColor: #B5B5B6 */
+/* $deepgrayColor: #878787 */
+/* $lightgrayColor: #F7F8F8 */
+/* ----------------------------------------------------- */
+
+/* 動畫設定 --------------------------------------------- */
+@keyframes Effectwalking{ 100%{ background-position: 3161px;}}
+@-webkit-keyframes Effectwalking{ 100%{ background-position: 3161px;}}
+@keyframes EffectStrokeDasharray{0%{ stroke-dashoffset: 563.9150390625; fill-opacity: 0;} 20%{ fill-opacity: 0;} 50%{ stroke-dashoffset: 0;} 100%{ stroke-opacity: 0; fill-opacity: 1;}}
+@-webkit-keyframes EffectStrokeDasharray{0%{stroke-dashoffset: 563.9150390625; fill-opacity: 0;} 20%{fill-opacity: 0;} 50%{ stroke-dashoffset: 0;} 100%{ stroke-opacity: 0; fill-opacity: 1;}}
+@keyframes EffectTextshadow{ 0%{ text-shadow: 2px 3px #a8edea, -3px -2px #fed6e3;} 25%{text-shadow: 3px -2px #a8edea, -2px 3px #fed6e3;} 75%{text-shadow: -3px -2px #a8edea, -2px -3px #fed6e3;} 100%{text-shadow: -3px 0 #a8edea, 2px -3px #fed6e3;}}
+@-webkit-keyframes EffectTextshadow{ 0%{ text-shadow: 2px 3px #a8edea, -3px -2px #fed6e3;} 25%{text-shadow: 3px -2px #a8edea, -2px 3px #fed6e3;} 75%{text-shadow: -3px -2px #a8edea, -2px -3px #fed6e3;} 100%{text-shadow: -3px 0 #a8edea, 2px -3px #fed6e3;}}
+@keyframes EffectLinerotate{ 0%{ transform: rotate(0deg);} 50%{ transform: rotate(-10deg);} 100%{ transform: rotate(0deg);}}
+@-webkit-keyframes EffectLinerotate{ 0%{ transform: rotate(0deg);} 50%{ transform: rotate(-10deg);} 100%{ transform: rotate(0deg);}}
+@keyframes EffectAboutLeftLine{ 0%{ transform: rotate(-20deg);} 50%{ transform: rotate(-30deg) scale(1.5);} 100%{ transform: rotate(-20deg);}}
+@-webkit-keyframes EffectAboutLeftLine{ 0%{ transform: rotate(-20deg);} 50%{ transform: rotate(-30deg) scale(1.5);} 100%{ transform: rotate(-20deg);}}
+@keyframes EffectLiquidFill{0%{ stroke-dasharray: 1700.0699462890625; fill-opacity: 0;} 20%{ fill-opacity: 0;} 50%{ stroke-dashoffset: 0;} 100%{ stroke-opacity: 0; fill-opacity: 1;}}
+@-webkit-keyframes EffectLiquidFill{0%{ stroke-dasharray: 1700.0699462890625; fill-opacity: 0;} 20%{ fill-opacity: 0;} 50%{ stroke-dashoffset: 0;} 100%{ stroke-opacity: 0; fill-opacity: 1;}}
+/* ----------------------------------------------------- */
+
+/* 漸變設定 --------------------------------------------- */
+.navbar a, .vis_textblock_girl, .triangle, .works_box_photo img, .liquid, .works_photo img, .project_info a, .close span, .works_photo img{ transition: .5s; -webkit-transition: .5s; -moz-transition: .5s; -o-transition: .5s; -ms-transition: .5s;}
+.vis_textblock_left_girl{ transition: 5s;}
+.works_box{ transition: .8s;}
+/* 置中 - Position absolute ---------------------------- */
+.loadingtext, .walking_wrap, .vis_main_text, .about_textbg_liquid{ position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); -webkit-transform: translate(-50%,-50%); -ms-transform: translate(-50%,-50%); -moz-transform: translate(-50%,-50%); -o-transform: translate(-50%,-50%);}
+section{ overflow: hidden;}
+.container{ width: 100%; position: relative;}
+/* ----------------------------------------------------- */
+
+/* NavBar ---------------------------------------------- */
+.navbar{ position: fixed; right: 3%; top: 3%; text-align: center; z-index: 10;}
+.navbar a{ display: block; font-family: 'Lora'; margin: 0 0 10px 0; font-size: 16px; letter-spacing: 1.2px; color: #14120F; font-weight: 700; cursor: pointer;}
+.navbar a:hover{ transform: translateX(-10%); -webkit-transform: translateX(-10%); -ms-transform: translateX(-10%); -moz-transform: translateX(-10%); -o-transform: translateX(-10%);}
+.mobileWhileBg{ width: 100%; height: 50px; background: url(../img/about_text_bg_while.svg) left 0 no-repeat; z-index: -1; position: absolute; top: 30%; right: -40%; transform: scale(3.5); -webkit-transform: scale(3.5); -moz-transform: scale(3.5); -ms-transform: scale(3.5); -o-transform: scale(3.5); opacity: 0;}
+.mobileWhileBg.active{ opacity: 1;}
+/* ----------------------------------------------------- */
+
+/* 載入區塊 - Loading ----------------------------------- */
+#loading{ width: 100%; height: 100vh; position: fixed; z-index: 999; background: #fff; top: 0; left: 0;}
+.walking_wrap{ width: 150px; height: 270px; overflow: hidden;}
+.loading_walking{ width: 970px; height: 270px; background: url(../img/an_girl_walking.svg) left center repeat-x;  animation: 1s Effectwalking steps(6) infinite; }
+.loadingtext span{ font-family: 'Lora'; font-size: 30px; animation: EffectTextshadow 1s infinite; color: #14120F;}
+/* ----------------------------------------------------- */
+
+/* section #1 Index ------------------------------------ */
+.vis_main_girl{ width: 100%; margin: -4% auto 0; overflow: hidden; position: relative; z-index: 2;}
+.vis_girl{ width: 100%; height: auto; display: block; padding-left: 2%; margin: 0 0 -1% 0;}
+.vis_main_text{ width: 70%; position: absolute; z-index: 2; top: 50%; background: #fff;}
+.st1{ stroke-dasharray: 563.9150390625; stroke-dashoffset: 563.9150390625; fill: #14120F;}
+.st1.activeSvgStroke{  animation: EffectStrokeDasharray 5s forwards; -webkit-animation: EffectStrokeDasharray 5s forwards; -moz-animation: EffectStrokeDasharray 5s forwards; -ms-animation: EffectStrokeDasharray 5s forwards; -o-animation: EffectStrokeDasharray 5s forwards;}
+.leftInfo{ position: fixed; left: 3%; z-index: 5; writing-mode: vertical-lr; -webkit-writing-mode: vertical-lr;}
+.left_top_content, .left_bottom_content{ position: fixed; top: 3%; left: 3%; font-family: 'Lora'; letter-spacing: 2px; font-size: 16px; font-weight: 700;}
+.left_bottom_content{ top: 86%;}
+.tri_container{ width: 100%; position: absolute; top: 20%; left: 0; z-index: 1;}
+.row{ width: calc(100% / 2 - 3px); display: inline-block; text-align: center; vertical-align: top; transform: scale(1.2); -webkit-transform: scale(1.2); -moz-transform: scale(1.2); -ms-transform: scale(1.2); -o-transform: scale(1.2);}
+.row img{ width: 220px;}
+.row:nth-child(1) img{ padding: 1% 50% 0 0; transition-duration: .2s;}
+.row:nth-child(2) img{ padding: 7.2% 0 0 27%; width: 140px; transition-duration: .4s;}
+.row:nth-child(3) img{ padding: 0 45% 0 0%; width: 140px; transition-duration: .6s;}
+.row:nth-child(4) img{ padding: 0 0 0 50%; width: 80px; transition-duration: .8s;}
+.tri_container .row:nth-child(5), .tri_container .row:nth-child(6){ margin: 12% 0 0 0;}
+.row:nth-child(5) img{ padding: 0 65% 0 0; transition-duration: 1s;}
+.row:nth-child(6) img{ padding: 0 0 0 35%; width: 60px; transition-duration: .4s;}
+.row:nth-child(7) img{ padding: 0 45% 0 0%; width: 80px; transition-duration: .6s;}
+.row:nth-child(8) img{ padding: 0 0 0 50%; width: 180px; transition-duration: .8s;}
+.row:nth-child(9) img{  padding: 1% 50% 0 0; width: 100px; transition-duration: 1s;}
+
+/* section #2 About ------------------------------------- */
+#section_about .container{ overflow: hidden;}
+.margintopimg{ width: 100%; margin-top: -1%;}
+.margintopimg img{ width: 100%; height: auto; display: block;}
+.marginbottomimg{ width: 100%; margin-bottom: -1%;}
+.marginbottomimg img{ width: 100%; height: auto; display: block;}
+.margintopright{ width: 20%; position: absolute; top: 0; right: 0;}
+.marginbottomleft{ width: 20%; position: absolute; left: 0; bottom: 0;}
+.marginbottomleft img{ transform: scale(1.2);}
+
+/*section #2 About main info*/
+.about_container{ width: 25%; margin: -8% auto 0; position: relative; z-index: 2;}
+.about_container h2{ margin-bottom: 18%;}
+.about_content{ transform: rotate(-12deg) scale(1.3);}
+.about_info{ margin: 0 0 0 20%; line-height: 2;}
+.about_info h5{ font-size: 17px; font-weight: 600; letter-spacing: 2.4px;}
+.about_info p{ font-size: 14px; margin-left: 8%;}
+.about_info p:nth-child(6){ margin-left: 15%;}
+.about_info p:nth-child(8){ margin-left: 15%;}
+.about_info p:nth-child(10){ margin-left: 15%;}
+.about_info h6{ margin-left: 2.3%; font-size: 15px;}
+.about_info span{ display: inline-block; width: 20px; height: 10px; background: url(../img/about_acc_thunder.svg) no-repeat left center;}
+.about_info .flashicon { width: 20px; background: url(../img/common_acc_thunder_text.svg) no-repeat left center;}
+.about_textbg_liquid{ width: 45%; z-index: 1; transform: scale(1.1) translate(-50%,-45%); -webkit-transform: scale(1.1) translate(-50%,-45%); -moz-transform: scale(1.1) translate(-50%,-45%); -ms-transform: scale(1.1) translate(-50%,-45%); -o-transform: scale(1.1) translate(-50%,-45%);}
+.vis_textblock_girl{ width: 396px; height: 795px; background: url(../img/an_girl_sayhi.svg) no-repeat 65px center; background-size: 236%; position: absolute; right: 18%; top: 15%;}
+.vis_textblock_left_girl{ background: url(../img/about_left_girl_walking_2.svg) no-repeat -2698px 0; width: 279px; height: 500px; position: absolute; bottom: 4%; left: 10%; background-size: cover;}
+.about_acc_img{ position: absolute; width: 25%; height: 100px;}
+.about_acc_line:nth-child(1){ left: -300%; top: 20%; position: absolute; transform-origin: 0; transform: rotate(-20deg) scale(1.5);}
+.about_acc_line:nth-child(2){ left: 390%; top: -170%; position: absolute; transform-origin: 0; transform: rotate(0deg) scale(1.0);}
+.about_acc_line:nth-child(2).active_effect{ animation: EffectLinerotate 3s infinite; -webkit-animation: EffectLinerotate 3s infinite; -moz-animation: EffectLinerotate 3s infinite; -o-animation: EffectLinerotate 3s infinite; -ms-animation: EffectLinerotate 3s infinite;}
+.about_acc_line:nth-child(1).active_effect{ animation: EffectAboutLeftLine 3s -2s infinite; -webkit-animation: EffectAboutLeftLine 3s -2s infinite; -moz-animation: EffectAboutLeftLine 3s -2s infinite; -o-animation: EffectAboutLeftLine 3s -2s infinite; -ms-animation: EffectAboutLeftLine 3s -2s infinite;}
+
+/* section #3 Works ------------------------------------- */
+.section_works{ height: 100vh;}
+.works_sky{ width: 100%; height: 390px; background: url(../img/work_acc_sky.svg) no-repeat right top; position: relative; z-index: 1;}
+.works_sky:after{ content: ''; display: block; width: 100%; height: 390px; background: url(../img/work_acc_star.svg) 0 0 repeat-y; top: 0; right: 0;  background-attachment: fixed;}
+.works_content h2{ width: 80%; margin: 5% auto 10%;}
+.works_project{ width: 80%; margin: 15% auto 0%; position: relative;}
+.works_project:after{ content: ''; width: 1px; height: 230px; position: absolute; left: 0; bottom: 0; background: #F7F8F8;}
+.works_project:nth-child(2) .works_box{ margin: 0;} 
+.works_project:nth-child(2):after{ content: ''; width: 1px; height: 230px; position: absolute; left: 100%; bottom: 0; background: #F7F8F8;}
+.works_project:nth-child(4) .works_box{ margin: 0;} 
+.works_project:nth-child(3) .liquid{ top: 0;}
+.works_project:nth-child(3) .str_center{ left: 60%; transform: translate(-50%,-70%) rotate(-360deg) scale(2); -webkit-transform: translate(-50%,-70%) rotate(-360deg) scale(2);}
+.works_box{ width: 60%; display: block; position: relative; margin-left: auto; z-index: 2;}
+.works_photo{ overflow: hidden; border: 1px solid #F7F8F8; background-color: #fff;}
+.works_photo img{ width: 100%; height: auto; display: block;}
+.works_box:hover .works_photo img{ transform: scale(1.3);} 
+.works_introduction{ padding: 0 0 2% 2%;}
+.works_introduction h5{ font-size: 15px; color: #333; margin: 2% 0 0 0; font-weight: 600; letter-spacing: 1.2px;}
+.works_introduction p{ font-size: 13px; color: #828282; letter-spacing: 1.2px;}
+.works_end_sky{ width: 100%; height: 390px; background: url(../img/work_acc_sky_end.svg) no-repeat left bottom; position: relative; z-index: 1; margin-bottom: -1%;}
+
+/* section #3 works acc */
+.liquid{ width: 32%; position: absolute; z-index: 1; right: 230px; bottom: 0; fill: #F7F8F8; stroke-dasharray: 1700.0699462890625; stroke-dashoffset: 1700.0699462890625;}
+.str_center{ left: 50%; transform: translate(-50%,50%) rotate(-90deg) scale(2); -webkit-transform: translate(-50%,50%) rotate(-90deg) scale(2);}
+.liquid.active_effect{ animation: EffectLiquidFill 8s forwards; -webkit-animation: EffectLiquidFill 8s forwards; -moz-animation: EffectLiquidFill 8s forwards; -o-animation: EffectLiquidFill 8s forwards; -ms-animation: EffectLiquidFill 8s forwards;}
+
+/* section #3 works Website project content*/
+.project_content{ width: 90%; height: 100%; position: fixed; background: #F7F8F8; top: 0%; left: 50%; transform: translate(-50%,0%); z-index: 5;}
+.project_img{ width: 65%; margin: 2% auto; background: #fff;}
+.project_img img{ width: 100%; height: auto; display: block;}
+.project_info{ width: 65%; margin: 0.8% auto 0; line-height: 32px;}
+.project_info h5{ font-size: 18px; letter-spacing: 0.5px; color: #14120F; font-weight: 600;}
+.project_info p{ font-size: 15px; letter-spacing: 1.2px; color: #878787;}
+.project_info a{ color: #fff; font-size: 15px; position: relative; display: inline-block; background: #14120F; padding: 0 2%; margin: 1% 0 0 0;}
+.project_info a:hover{ border: 1px solid #14120F; color: #14120F; background: #fff;}
+.close{ width: 65%; margin: 1% auto; border-top: 1px solid #B5B5B6; border-bottom: 1px solid #B5B5B6;}
+.close span{ color: #14120F; font-size: 14px; cursor: pointer; display: block; letter-spacing: 1px; position: relative;  text-align: center; padding: 1% 0;}
+.close span:hover{ transform: translateX(-5%); -webkit-transform: translateX(-5%); -ms-transform: translateX(-5%); -moz-transform: translateX(-5%); -o-transform: translateX(-5%);}
+
+/* section #3 works Illustrator project content*/
+.others_project{ width: 100%; margin: 0 auto; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;}
+.others_work_project{ width: 40%; margin: 0 0 3% 0;}
+.others_project .others_work_project{ margin: 2% 1%;}
+.others_box .works_photo{ width: 100%;}
+.others_box .works_photo img{ width: 100%; height: auto; display: block;}
+.others_box:hover .works_photo img{ transform: scale(1.3);} 
+
+/* footer */
+footer{ background: #14120F; width: 100%; text-align: center;}
+footer p{ padding: 2% 0; color: #F7F8F8; font-size: 13px; letter-spacing: 1.2px;}
+
+
+/* Media Query Break point ----------------------------- */
+@media (max-width: 1920px) and (min-width: 1440px){
+/*font-size*/
+.navbar a{ font-size: 20px;}
+/* section #1 index */
+.navbar a{ margin: 0 0 20% 0;}
+.vis_main_girl{ margin: -4% auto 0;}
+.vis_girl{ width: 80%; margin: 5% auto -1%;}
+.tri_2, .tri_4, .tri_6, .tri_8{ transform: scale(1.5);}
+}
+
+@media (max-width: 1366px) and (min-width: 1200px){
+/*section #1 index*/
+.left_bottom_content{ top: 82%;}
+
+/*section #2 about*/
+.vis_textblock_girl{ top: 5%; right: 15%;}
+.vis_textblock_left_girl{ left: -3%; bottom: 0;}
+}
+
+@media (max-width: 1024px){
+/*font-size*/
+/*title font size*/
+.works_introduction h5, .project_info h5{ font-size: 20px;}
+
+/*info font size*/
+.works_introduction p, .project_info p, .close span{ font-size: 18px;}
+
+/*btn font size*/
+.project_info a{ font-size: 16px;}
+
+/*NavBar*/
+.navbar a{ font-size: 20px; margin: 0 0 20px 0;}
+/* section #1 index */
+.vis_main_text{ width: 90%;}
+.tri_container{ top: 15%;}
+.vis_main_girl{ margin: 0 auto;}
+.vis_girl{ width: 130%; margin: 0 0 -1% -10%; padding: 4% 0 0 0;}
+/*section #2 about*/
+.about_container{ width: 40%; margin: 5% auto;}
+.margintopright{ width: 25%;}
+.marginbottomleft{ width: 25%;}
+.about_textbg_liquid{ width: 60%; transform: scale(1.1) translate(-45%,-28%); -webkit-transform: scale(1.1) translate(-45%,-28%); -moz-transform: scale(1.1) translate(-45%,-28%); -o-transform: scale(1.1) translate(-45%,-28%); -ms-transform: scale(1.1) translate(-45%,-28%); }
+.vis_textblock_girl{ right: 0;}
+.vis_textblock_left_girl{ bottom: -1%; left: -12%;}
+/*section #3 works*/
+.close{  margin: 4% auto; width: 75%;}
+.project_img{ width: 80%; margin: 4% auto;}
+.project_info{ width: 75%; margin: 5% auto 0;}
+.project_info a{ display: inline-block; padding: 1% 5%; border: 1px solid #14120F; margin: 5% 0 0 0;}
+.project_info p{ padding: 1.5% 0 0 0;}
+}
+
+@media (max-width: 768px){
+/*font-size*/
+/*Main - title font size*/
+.font_title{ font-size: 70px;}
+/*section #1 index*/
+.vis_girl{ width: 174%; margin: 0 0 -1% -62%;}
+.vis_main_text{ z-index: 5; width: 110%; transform: translate(-88%,-38%) rotate(90deg); -webkit-transform: translate(-88%,-38%) rotate(90deg); -moz-transform: translate(-88%,-38%) rotate(90deg); -o-transform: translate(-88%,-38%) rotate(90deg); -ms-transform: translate(-88%,-38%) rotate(90deg);}
+.tri_container{ top: 20%; left: -10%; transform: rotate(150deg) scale(1.2); -webkit-transform: rotate(150deg) scale(1.2); -moz-transform: rotate(150deg) scale(1.2); -ms-transform: rotate(150deg) scale(1.2); -o-transform: rotate(150deg) scale(1.2);}
+/*section #2 about*/
+.about_container{ margin: 12% auto;}
+.about_textbg_liquid{ transform: scale(1.1) translate(-40%,-28%); -webkit-transform: scale(1.1) translate(-40%,-28%); -moz-transform: scale(1.1) translate(-40%,-28%); -o-transform: scale(1.1) translate(-40%,-28%); -ms-transform: scale(1.1) translate(-40%,-28%);}
+.vis_textblock_left_girl{ left: -20%;}
+.margintopright{ width: 28%;}
+/*section #3 works*/
+.works_box{ width: 75%;}
+.works_project{ margin: 20% auto -10%;}
+.close{ margin: 6% auto;}
+}
+
+@media (max-width: 480px){
+/*font-size*/
+/*Main - title font size*/
+.works_other_container .font_title{ font-size: 45px;}
+/*section #1 index*/
+.tri_container{ top: 30%; left: 8%;}
+.vis_main_girl{ margin: 35% auto;}
+.vis_girl{ width: 210%; margin: 0 0 -2% -69%;}
+.vis_main_text{ transform: translate(-81%,-30%) rotate(90deg) scale(1.8); -webkit-transform: translate(-81%,-30%) rotate(90deg) scale(1.8); -moz-transform: translate(-81%,-30%) rotate(90deg) scale(1.8); -ms-transform: translate(-81%,-30%) rotate(90deg) scale(1.8); -o-transform: translate(-81%,-30%) rotate(90deg) scale(1.8);}
+.tri_container{ top: 5%; left: 8%; transform: rotate(140deg) scale(1.2);}
+/*section #2 about*/
+.about_container{ width: 65%; margin: 73% auto 10%;}
+.about_container h2{ margin-bottom: 10%; }
+.about_content{ transform: rotate(-7deg) scale(1.3); -webkit-transform: rotate(-7deg) scale(1.3); -moz-transform: rotate(-7deg) scale(1.3); -ms-transform: rotate(-7deg) scale(1.3); -o-transform: rotate(-7deg) scale(1.3);}
+.about_info{ margin: 0 0 0 11%;}
+.about_acc_img{ width: 50%;}
+.about_acc_line:nth-child(2){ left: -120%; top: 60%;}
+.about_acc_line:nth-child(1){ left: 39%; top: -305%;}
+.vis_textblock_left_girl{ display: none;}
+.vis_textblock_girl{ right: 35%; top: 0;}
+.about_textbg_liquid{ transform: scale(2.7) translate(-35%,-1%); -webkit-transform: scale(2.7) translate(-35%,-1%); -moz-transform: scale(2.7) translate(-35%,-1%); -ms-transform: scale(2.7) translate(-35%,-1%); -o-transform: scale(2.7) translate(-35%,-1%);}
+.margintopright{ width: 48%;}
+/*section #3 works*/
+.works_sky{ height: 200px; background-size: 140%;}
+.works_project{ width: 100%; margin: 40% auto -10%;}
+.works_box{ width: 90%; margin: 0 auto;}
+.works_project:nth-child(even) .works_box{ width: 90%; margin: 0 auto;}
+.others_project .others_work_project{ width: 90%; margin: 4% auto; border: 1px solid #F7F8F8; box-sizing: border-box; -webkit-box-sizing: border-box;}
+.project_img{ width: 90%; margin: 44% auto 5%;}
+.project_info a{ width: 90%; padding: 5%; text-align: center;}
+.close{ margin: 4% auto;}
+.close span{ padding: 5% 0;}
+.works_content h2{ width: 90%;}
+}
+
+@media (max-width: 425px){
+/*section #1 index*/
+.vis_main_girl{ margin: 37% auto;}
+.vis_main_text{ transform: translate(-81%,-30%) rotate(90deg) scale(1.8); -webkit-transform: translate(-81%,-30%) rotate(90deg) scale(1.8); -moz-transform: translate(-81%,-30%) rotate(90deg) scale(1.8); -ms-transform: translate(-81%,-30%) rotate(90deg) scale(1.8); -o-transform: translate(-81%,-30%) rotate(90deg) scale(1.8); }
+
+/*section #2 about*/
+.about_container{ margin: 50% auto 33%;}
+.about_textbg_liquid{ transform: scale(2.7) translate(-35%,-10%); -webkit-transform: scale(2.7) translate(-35%,-10%); -ms-transform: scale(2.7) translate(-35%,-10%); -moz-transform: scale(2.7) translate(-35%,-10%); -o-transform: scale(2.7) translate(-35%,-10%);}
+.vis_textblock_girl{ top: -7%;}
+}
+
+
+@media (max-width: 375px){
+/*font-size*/
+.about_container h2{ font-size: 55px;}
+/*section #1 index*/
+.vis_main_girl{ margin: 45% auto;}
+.vis_main_text{ transform: translate(-81%,-30%) rotate(90deg) scale(1.9); -webkit-transform: translate(-81%,-30%) rotate(90deg) scale(1.9); -moz-transform: translate(-81%,-30%) rotate(90deg) scale(1.9); -ms-transform: translate(-81%,-30%) rotate(90deg) scale(1.9); -o-transform: translate(-81%,-30%) rotate(90deg) scale(1.9);}
+.left_bottom_content{ top: 82%;}
+/*section #2 about*/
+.about_container{ margin: 50% auto 33%;}
+.about_textbg_liquid{ transform: translate(-35%,-40%) scale(3.2);}
+.vis_textblock_girl{ right: 25%; top: -10%;}
+
+}
+
+@media (max-width: 360px){
+/*font-size*/
+/*Main - title font size*/
+.about_container h2{ font-size: 55px;}
+/*section #2 about*/
+.about_container{ margin: 25% auto 10%;}
+.about_content{ transform: rotate(-7deg) scale(1.2); -webkit-transform: rotate(-7deg) scale(1.2); -moz-transform: rotate(-7deg) scale(1.2); -ms-transform: rotate(-7deg) scale(1.2); -o-transform: rotate(-7deg) scale(1.2); }
+.about_textbg_liquid{ transform: scale(2.7) translate(-18%,-22%) rotate(-310deg); fill-opacity: .8;}
+.vis_textblock_girl{ top: 55%; right: 35%;}
+.margintopright{ width: 50%; z-index: 4;}
+.project_info a{ margin: 15% 0 0 0;}
+.project_img{ margin: 50% auto 5%;}
+}
+
+@media (max-width: 320px){
+/*Loading walk*/
+.loadingtext{ width: 52%;}
+.walking_wrap{ width: 350px;}
+
+/*section #1 index*/
+.left_bottom_content{ top: 80%;}
+
+/*section #2 about*/
+.vis_textblock_girl{ top: 45%;}
+
+/*section #3 works*/
+.project_img{ margin: 22% auto 5%;}
+
+}
+
+
+
+
+
+
+
