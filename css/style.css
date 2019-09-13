@@ -140,8 +140,8 @@ section{ overflow: hidden;}
 .liquid.active_effect{ animation: EffectLiquidFill 8s forwards; -webkit-animation: EffectLiquidFill 8s forwards; -moz-animation: EffectLiquidFill 8s forwards; -o-animation: EffectLiquidFill 8s forwards; -ms-animation: EffectLiquidFill 8s forwards;}
 
 /* section #3 works Website project content*/
-.project_content{ width: 90%; height: 100%; position: fixed; background: #F7F8F8; top: 0%; left: 50%; transform: translate(-50%,0%); z-index: 5;}
-.project_img{ width: 65%; margin: 0 auto; background: #fff;}
+.project_content{ width: 100%; height: 100%; position: fixed; background: rgba(30,30,30,0.9); top: 0%; left: 0%; z-index: 5; overflow-y: scroll;}
+.project_img{ width: 65%; margin: 4% auto 0; background: #fff;}
 .project_img img{ width: 100%; height: auto; display: block;}
 .project_info{ width: 65%; margin: 0.8% auto 0; line-height: 32px;}
 .project_info h5{ font-size: 18px; letter-spacing: 0.5px; color: #14120F; font-weight: 600;}
@@ -159,6 +159,7 @@ section{ overflow: hidden;}
 .others_box .works_photo{ width: 100%; box-sizing: border-box; -webkit-box-sizing: border-box;}
 .others_box .works_photo img{ width: 100%; height: auto; display: block;}
 .others_box:hover .works_photo img{ transform: scale(1.3);} 
+.overlay_scroll{ width: 90%; position: absolute; top: 50%; background-color: #fff; left: 50%; transform: translate(-50%, -50%); border-radius: 5px;}
 
 /* footer */
 footer{ background: #14120F; width: 100%; text-align: center;}
@@ -212,7 +213,7 @@ footer p{ padding: 2% 0; color: #F7F8F8; font-size: 13px; letter-spacing: 1.2px;
 .vis_textblock_left_girl{ bottom: -1%; left: -12%;}
 /*section #3 works*/
 .close{  margin: 4% auto; width: 75%;}
-.project_img{ width: 75%; margin: 0 auto;}
+.project_img{ width: 75%; margin: 4% auto 0;}
 .project_info{ width: 75%; margin: 5% auto 0;}
 .project_info a{ display: inline-block; padding: 1% 5%; border: 1px solid #14120F; margin: 5% 0 0 0;}
 .project_info p{ padding: 1.5% 0 0 0;}

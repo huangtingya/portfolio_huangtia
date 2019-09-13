@@ -27,8 +27,20 @@ $(function(){
 			$DrawProjectContent.fadeOut(100);
 		});
 
-		$WorkProjectContent.on('touchstart click', function(event){
+		$('.overlay_scroll').on('touchstart click', function(event){
 				event.stopPropagation();
+		});
+
+		$WorkProjectContent.on('touchstart click',function(){
+			if ( $WorkProjectContent == $WorkProjectContent) {
+				$WorkProjectContent.fadeOut(100);
+			}
+		});
+		
+		$DrawProjectContent.on('touchstart click',function(){
+			if ( $DrawProjectContent == $DrawProjectContent) {
+				$DrawProjectContent.fadeOut(100);
+			}
 		});
 		
 		$WorkProjectBox.on('click',function(){
